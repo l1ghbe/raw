@@ -9,9 +9,23 @@ links.forEach(link => {
     })
 })
 const images = document.querySelectorAll('.image-parallax')
+const cursor = document.querySelector('.cursor')
 
+
+let cursorEvents = {
+    x: 0,
+    y: 0
+}
+
+document.addEventListener('mousemove', e => {
+    cursorEvents.x = e.clientX 
+    cursorEvents.y = e.clientY
+    
+    cursor.style.transform = `translate(${cursorEvents.x}px, ${cursorEvents.y}px)`
+})
 
 window.addEventListener('mousemove', e => {
+    
 
     images.forEach(image => {
         let movingValue = image.getAttribute('data-speed')

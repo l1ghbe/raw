@@ -15,6 +15,58 @@ ul {
 
 body {
   color: #fff;
+  overflow: hidden;
+}
+
+.cursor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  border: 3px solid #fff;
+  -webkit-transition: .08s;
+  transition: .08s;
+}
+
+.cursor span {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -47%);
+          transform: translate(-50%, -47%);
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+a:hover .cursor {
+  border: 2px solid #000;
+}
+
+@-webkit-keyframes cursorAnimate {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnimate {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 
 .header {
