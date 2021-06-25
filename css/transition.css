@@ -1,0 +1,38 @@
+.transition {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: .5s;
+    top: -100%;
+    z-index: 10000;
+}
+
+.transition-span {
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+    height: 100vh;
+
+}
+
+.span-left {
+    background-color: #111;
+    top: -100vh;
+    transition: .8s;
+}
+.span-right {
+    background-color: #111;
+    bottom: -200vh;
+}
+.transition.is-active {
+    top: 0;
+}
+
+.transition.is-active .span-left {
+    top: 0%;
+}
+.transition.is-active .span-right {
+    bottom: 0%;
+}
