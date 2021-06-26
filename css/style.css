@@ -108,9 +108,24 @@ a:hover .cursor {
   margin: 0 auto;
 }
 
+.logo {
+  position: relative;
+}
+
 @media (max-width: 500px) {
   .logo {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+  }
+  .logo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 65%;
+    height: 2px;
+    background-color: #fff;
   }
 }
 
@@ -130,7 +145,7 @@ a:hover .cursor {
 
 @media (max-width: 442px) {
   .logo-title {
-    font-size: 22px;
+    font-size: 28px;
   }
 }
 

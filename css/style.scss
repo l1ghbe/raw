@@ -83,8 +83,21 @@ a:hover {
     margin: 0 auto;
 }
 .logo {
+    position: relative;
+    
     @media (max-width: 500px) {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+        &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 65%;
+        height: 2px;
+        background-color: #fff;
+        
+    }
     }
 }
 .logo-title {
@@ -97,7 +110,7 @@ a:hover {
         font-size: 28px;
     }
     @media (max-width: 442px) {
-        font-size: 22px;
+        font-size: 28px;
     }
 }
 
