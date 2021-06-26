@@ -90,10 +90,28 @@ a:hover .cursor {
   padding-top: 43px;
 }
 
+@media (max-width: 500px) {
+  .header__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .container {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    margin-bottom: 15px;
+  }
 }
 
 .logo-title {
@@ -155,6 +173,12 @@ a:hover .cursor {
   transition: .6s;
   padding: 5px 10px;
   z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .navigation-item__link {
+    padding: 9px 18px;
+  }
 }
 
 @media (max-width: 340px) {
@@ -414,7 +438,7 @@ a:hover .cursor {
     font-size: 55px;
   }
   .main-title-text:not(:last-child) {
-    margin-bottom: -20px;
+    margin-bottom: 20px;
   }
 }
 
