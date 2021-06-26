@@ -133,8 +133,7 @@ window.addEventListener('load', () => {
 //     stagger: 0.3,
 //     y: 50
 // })
-        
 if (window.innerWidth < 768) {
-    document.querySelector('.cursor').classList.display = 'none'
-    
+    document.querySelector('.cursor').style.display = 'none'
 }
+        
