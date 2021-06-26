@@ -134,3 +134,7 @@ window.addEventListener('load', () => {
 //     y: 50
 // })
         
+if (window.innerWidth < 768) {
+    document.querySelector('.cursor').classList.display = 'none'
+    
+}
